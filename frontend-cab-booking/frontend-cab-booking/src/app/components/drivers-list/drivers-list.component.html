@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Drivers List</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>License Number</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let driver of drivers">
+          <td>{{ driver.id }}</td>
+          <td>{{ driver.name }}</td>
+          <td>{{ driver.email }}</td>
+          <td>{{ driver.phone }}</td>
+          <td>{{ driver.licenseNumber }}</td>
+          <td>
+            <button class="btn btn-sm btn-primary" (click)="updateDriver(driver.id)">Update</button>
+            <!-- <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteConfirmationModal">Delete</button> -->
+            <!-- Delete Confirmation Component -->
+            <!-- <app-delete-confirmation (confirmDelete)="deleteDriverConfirmation(driver.id)"></app-delete-confirmation> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

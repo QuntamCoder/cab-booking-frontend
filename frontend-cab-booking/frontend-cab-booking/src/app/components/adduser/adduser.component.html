@@ -1,0 +1,25 @@
+<p>createplayer works!</p>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="id">Player Id</label>
+            <input type="text"  class="form-control" id="email" required [(ngModel)]="users.email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="id">Player Id</label>
+            <input type="text"  class="form-control" id="name" required [(ngModel)]="users.name" name="name">
+        </div>        <div class="form-group">
+            <label for="id">Player Id</label>
+            <input type="text"  class="form-control" id="password" required [(ngModel)]="users.password" name="password">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Player Name</label>
+            <input type="text"  class="form-control" id="phone" required [(ngModel)]="users.phone" name="phone">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+</div>

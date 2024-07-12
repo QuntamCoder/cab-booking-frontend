@@ -1,0 +1,18 @@
+<p>location works!</p>
+<div class="location-container">
+  <h2>Enter Location Details</h2>
+  <form (ngSubmit)="onSubmit()" *ngIf="!isBooking"> <!-- Only show if isBooking is false -->
+    <div class="form-group">
+      <label for="pickup">Pickup Location:</label>
+      <input type="text" id="pickup" name="pickup" [(ngModel)]="locations.pickup" required>
+    </div>
+    <div class="form-group">
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination" [(ngModel)]="locations.destination" required>
+    </div>
+    <button type="submit">Proceed</button>
+  </form>
+  <div *ngIf="isBooking">
+    <app-booking></app-booking> <!-- Show booking component when isBooking is true -->
+  </div>
+</div>
